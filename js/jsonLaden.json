@@ -1,0 +1,37 @@
+[
+    {
+        "id"    :1,
+        "name"  : "ahmad",
+        "age"  : 25,
+        "email" :"alhamad.ahmad@web.de",
+        "pets":[{
+            "type" : "Dog",
+            "name" : "fred"
+            }
+        ]
+    },
+    {
+        "id"    :2,
+        "name"  : "Ali",
+        "age"  : 35,
+        "email" :"ali.ahmad@web.de",
+        "pets":[{
+            "type" : "Cat",
+            "name" : "Josie"
+            }
+        ]
+    },
+
+    {
+        "id"    :3,
+        "name"  : "Hassan",
+        "age"  : 45,
+        "email" :"itengineer99@web.de",
+        "pets":[{
+            "type" : "Kangro",
+            "name" : "Josie"
+            }
+        ]
+    }
+]
+

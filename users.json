@@ -1,0 +1,22 @@
+[
+    {
+        "id"    :1,
+        "name"  : "ahmad",
+        "age"  : 25,
+        "email" :"alhamad.ahmad@web.de"
+    },
+    {
+        "id"    :2,
+        "name"  : "Ali",
+        "age"  : 35,
+        "email" :"ali.ahmad@web.de"
+    },
+
+    {
+        "id"    :3,
+        "name"  : "Hassan",
+        "age"  : 45,
+        "email" :"itengineer99@web.de"
+    }
+]
+

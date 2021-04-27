@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<samlung>
+    <event>
+        <location>Silbersee</location>
+        <date>Heute</date>
+        <map >bilder/img1.jpg</map>
+    </event>
+    
+    <event>
+        <location>Edersee</location>
+        <date>Sonntag</date>
+        <map >bilder/img3.jpg</map>
+    </event>
+    
+    <event>
+        <location>Chiemsee</location>
+        <date>Montage</date>
+        <map >bilder/img4.jpg</map>
+    </event>
+
+</samlung>

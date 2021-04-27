@@ -1,0 +1,40 @@
+ {
+    "artists":[
+        {
+            "name": "Del Amitri",
+            "alben": [
+                 {
+                   "titel": "Raintown", 
+                   "year": "1991"
+                 },
+                 {
+                   "titel": "Dignity", 
+                   "year": "2019"
+                 },
+                 {
+                   "titel": "Movies", 
+                   "year": "2020"
+                 }                 
+             ]
+        },
+        {
+            "name": "Hothouse Flowers",
+            "alben": [
+                 {
+                   "titel": "Do you go", 
+                   "year": "1998"
+                 },
+                 {
+                   "titel": "Dignity", 
+                   "year": "2019"
+                 },
+                 {
+                   "titel": "Movies", 
+                   "year": "2020"
+                 }                 
+             ]
+        }
+    ]
+
+     
+ }

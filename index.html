@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Java-Script</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <h1>Java-Script</h1>
+        </div>
+        
+
+        <script>
+            
+            var obst = ['apfel ', 'banana ', ' beere'];
+            obst.push(' kiwi');
+            function Obst(){
+                document.getElementById('obst').innerHTML= obst;
+            }
+            //anonzym function
+            window.onload = function(){
+                document.getElementById('horst').innerHTML="Heute ist ein Schoener Tag";
+            }
+            
+            var x=20;
+            
+            //genante function
+            function ausgabe(){
+                alert('Der Wert von X ist : ' + x);
+            }
+            
+            document.addEventListener('DOMContentLosd', ausgabe);
+            
+            //getanken();
+            
+            function summe(a,b){
+                var erg=a+b;
+                //document.write('The Sum of ' +a + ' and '+ b + ' ist '+ erg);
+                document.getElementById('sume').innerHTML='The Sum of ' +a + ' and '+ b + ' ist '+ erg;
+            }
+            function getanken(){
+                    var kraftstoff = prompt('Welchen kraftstoff haben Sie getankt? d, g,s');
+                    var liter = prompt('Wie viel Liter haben Sie getankt?');
+                    var rechnung;
+                    var preis_gas =1.5;
+                    var preis_diesel =1.1;
+                    var preis_super =1.8;
+
+                    if(kraftstoff==='d' || kraftstoff==='D'){
+                       rechnung= liter * preis_diesel;
+                       document.write('Ihre Rechnung betraegt '+ rechnung + ' Euro <hr>');
+                    }
+                    else if(kraftstoff==='s' || kraftstoff==='S'){
+                           rechnung= liter * preis_super;
+                           document.write('<p>Ihre Rechnung betraegt '+ rechnung + ' Euro </p><hr>');
+                    }
+                    else if(kraftstoff==='g' || kraftstoff==='G'){
+                           rechnung= liter * preis_gas;
+                           document.write('Ihre Rechnung betraegt '+ rechnung + ' Euro <hr>');
+                           document.writeln('Ihre Rechnung betraegt '+ rechnung + ' Euro!');
+                    }
+                }
+        </script><!-- comment -->
+        
+        <h2 id ='horst'>Windows onlaod</h2>
+        <h2 id ='sume'>Summe</h2>
+        <h2 id ='obst'>Obst</h2>
+        <button onclick="ausgabe()">Click me</button>
+         <button onclick="summe(20,78)">Summe</button>
+         <button onclick="Obst()">Obst</button>
+    </body>
+</html>

@@ -1,0 +1,145 @@
+
+#leinwand {
+    margin: 20px;
+    padding: 10px;
+    max-height: 600px;
+    max-width: 600px;
+}
+
+.images{
+    border: 1px solid gray;
+    border-radius: 5px;
+    width:content-box;
+}
+
+ .topImgs {
+    margin: 10px;
+    padding: 10px;
+    max-height: 60px;
+    max-width: 60px;
+}
+
+ .topImgs:hover { 
+    max-height: 90px;
+    max-width: 90px;
+}
+
+.container {
+    width: 50%;
+    margin: 50px;
+}
+
+
+li{
+    color: hsl(210, 50%, 40%);
+    text-align: left;
+}
+
+.warm{
+    background-color: #d2b48c;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.heiss
+{
+    border: 2px solid purple;
+    border-radius: 5px;
+    background-color: #bcd2ee;
+    color: wheat;
+}
+
+.kalt{
+    background-color: #cdcd00;
+    color: antiquewhite;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+.ulListe{
+   width: 250px;
+   align-content: center;
+}
+
+.border1{
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightcyan;
+    color: black;
+}
+
+.border2{
+    border: 2px solid red;
+    border-radius: 5px;
+    background-color:lightsteelblue;
+    color: black;
+}
+
+.border3{
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color:lightcoral;
+    color: black;
+}
+
+#page{
+    width: 450px;
+    height: auto;
+    background: #a6ffb9;
+    margin: auto;
+    margin-top: 80px; 
+    border: 2px solid blue;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#usersDiv{
+    display: flex;
+    flex-direction: column;
+    background: #f4f4f4;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.cont {
+        background: #f4f4f4;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        margin-bottom: 10px;
+}
+
+/*#content div{
+    height: auto;
+    border: 1px solid silver;
+    border-radius: 7px;
+    box-shadow: 5px 10px 18px #888888;
+    margin-bottom: 10px;
+}*/
+
+.divs{
+    width: 250px;
+    height: 250px;
+    border: 1px solid silver;
+    border-radius: 7px;
+    box-shadow: 10px 10px 10px #888888;
+    margin: 10px;
+}
+
+#content p{
+   margin: 20px;
+}
+
+img{
+    margin: 20px;
+    width:80%;
+    height: 70%;
+}
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+    align-content:center;
+    background-color: rgba(46,145,252,0.05);
+
+}

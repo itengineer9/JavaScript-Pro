@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>DOM-Elemente zugriff</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <style>
+            strong, p, div{
+                border: 1px solid blue;
+                padding: 20px;
+            }
+            strong{
+                                border: none;
+
+            }
+        </style>
+        
+        
+    </head>
+    
+    
+    <body>
+        <div id="div1">
+            <p id="absatz1"> Das ist Absatz1<strong id="strong1">Das ist strong 1</strong></p>
+        </div>
+      <div id="div2">
+            <p id="absatz2"> Das ist Absatz2<strong id="strong2">Das ist Capturing 2</strong></p>
+        </div>
+        
+        
+        <script>
+            
+          function strong1(){
+              alert('ich bin Strong 1');
+          } 
+          function para1(){
+              alert('ich bin Paragraph 1');
+          }
+          function div1(){
+              alert('ich bin Division 1');
+          }  
+          
+          function strong2(){
+              alert('ich bin Strong 2');
+          } 
+          function para2(){
+              alert('ich bin Paragraph 2');
+          }
+          function div2(){
+              alert('ich bin Division 2');
+          } 
+          
+          //bubbling
+          document.getElementById('strong1').addEventListener('click', strong1, false);
+          document.getElementById('absatz1').addEventListener('click', para1, false);
+          document.getElementById('div1').addEventListener('click', div1, false);
+          
+          //Capturing
+          document.getElementById('strong2').addEventListener('click', strong2, true);
+          document.getElementById('absatz2').addEventListener('click', para2, true);
+          document.getElementById('div2').addEventListener('click', div2, true);
+
+        </script>
+    </body>
+</html>

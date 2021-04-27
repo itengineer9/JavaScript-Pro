@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ajax 4 & PHP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        
+        <script>
+            
+            
+        </script>
+    </head>
+    
+    
+    <body>
+        <button id="btns">Get Name</button>
+        <hr><!-- comment -->
+        <form method="GET" action="process.php">
+            <input type="text" name="name">
+            <input type="submit" name="Submit">
+        </form>
+        <script>
+            
+            document.getElementById('btns').addEventListener('click', getName);
+            
+            function getName(){
+                var xhr= new XMLHttpRequest();
+                 xhr.open('GET','process.php?name=Ahmad', true);
+                 xhr.onload= function(){
+                     console.log( this.responseText);
+                     
+                 };//onload
+                 xhr.send();
+            }// getName
+        </script>
+    </body>
+</html>

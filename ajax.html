@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ajax file</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link rel="shortcut icon" href="#">
+    </head>
+    
+    
+    <body>
+        <div class="container">
+            <div id="page">
+                
+                <h3>AJAX Fuctions</h3>
+              
+                <button class="btn btn-primary" id="button">Get Text File</button>
+                
+                <p id="userDiv">user</p>
+                <p id="text">Option</p>
+                <div id="usersDiv"></div>
+                <button class="btn btn-primary" id="userBtn">Get user</button>
+                <button class="btn btn-primary" id="usersBtn">Get Github users</button>
+     
+            </div>
+            
+
+        </div>
+        
+        
+                
+        <script>
+            
+            // create evemt Listener
+            document.getElementById('button').addEventListener('click', loadText);
+            let user =document.getElementById('userBtn');
+            let users =document.getElementById('usersBtn');
+            
+            user.addEventListener('click', loadUser);
+            users.addEventListener('click', loadUsers);
+            
+             function loadUser(){
+                 var xhr= new XMLHttpRequest();
+                 xhr.open('GET','user.json', true);
+                 
+                 xhr.onload= function(){
+                     if(this.status ===200 ){
+                        var user=JSON.parse(this.responseText);
+                        console.log(user.name);
+                        
+                        var output ='';
+                        output += '<ul>'+
+                                        '<li class="heiss">ID: '+user.id+'</li>'+
+                                        '<li class="kalt">Name: '+user.name+'</li>'+
+                                        '<li class="warm">Email: '+user.email+'</li>'+
+                                    '</ul>';
+                        
+                        document.getElementById('userDiv').innerHTML= output; 
+                     }
+                 };
+                 xhr.send();
+                 
+             }
+            window.onload( loadUsers());
+            
+             function loadUsers(){
+                 var xhr= new XMLHttpRequest();
+                 xhr.open('GET','https://api.github.com/users', true);
+                 
+                 xhr.onload= function(){
+                     if(this.status === 200){
+                        var users = JSON.parse(this.responseText)
+                        
+                        var output ='';
+                        for(let i in users){
+                            output += '<ul>'+
+                                        '<li >ID: '+users[i].id+'</li>'+
+                                        '<li >Login: '+users[i].login+'</li>'+
+                                        '<li >Admin: '+users[i].site_admin+'</li>'+
+                                    '</ul>'+
+                                    '<img src=" '+users[i].avatar_url+'"width=" 70 "height="70 ">';
+                        
+                        }
+                        document.getElementById('usersDiv').innerHTML= output; 
+
+                     }
+                 };
+                 
+                 xhr.send(null);// null = send file without data
+             }            
+            
+            function loadText(){
+                console.log('button clicked');
+                //create XHR Object
+                var xhr = new XMLHttpRequest(); // AJAX = Async JavaScript Xml
+                //open - type, url/file , async
+                //console.log(xhr);
+                
+                xhr.open('GET', 'sample.txt', true);// true = asyync
+                
+                console.log('READYSTATE:First Time ', xhr.readyState);
+                
+                xhr.onload = function(){
+                    if (xhr.status === 200){
+                      console.log(this.responseText);  
+                    }
+                };
+                   
+
+               // Optional used for Loaders
+               
+               xhr.onprogress = function(){
+                    console.log('READYSTATE: On_Progress ', xhr.readyState);  
+               };
+               
+                xhr.onreadystatechange = function(){
+                    console.log('READYSTATE:Before Check ', xhr.readyState);
+
+                    if (xhr.status === 200 && this.readyState ===4){
+                      document.getElementById('text').innerHTML=
+                              this.responseText;   
+                    }else if(this.status = 404){
+                     document.getElementById('text').innerHTML='The Text Not Found';
+                              
+                    }
+                };
+                
+                xhr.onerror= function(){
+                    console.log('Reqquest Error ...!');
+                };
+                //send request
+                xhr.send();
+                            
+            }
+            
+            // Status:
+            // 200 => OK
+            // 403 => Forbidden
+            // 404 => Not Found
+            // 
+            // ReadyState:
+            // 0 => request not Initialized
+            // 1 => Server connection established
+            // 2 => request received
+            // 3 => processing request
+            // 4 => request finished and response is ready
+            
+        </script>
+    </body>
+</html>

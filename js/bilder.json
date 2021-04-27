@@ -1,0 +1,17 @@
+[
+    {
+        "location": "Silbersee",
+        "date": "Heute",
+        "map": "bilder/img1.jpg"
+    },
+    {
+        "location": "Edersee",
+        "date": "Sonntag",
+        "map": "bilder/img3.jpg"
+    },
+    {
+        "location": "Chiemsee",
+        "date": "Montage",
+        "map": "bilder/img4.jpg"
+    }
+]

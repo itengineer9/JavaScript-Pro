@@ -1,0 +1,43 @@
+
+
+
+class Item {
+    
+    
+    constructor (name, price, auther, isbn){
+        
+        this.name = name;
+        this.price = price;
+        this.auther = auther;
+        this.isbn =isbn;
+       }
+       
+       
+       printDescription(){
+           console.log(this.auther +' | '+this.name);
+       }
+       
+     parag(pText){
+        var para = document.createElement("P");                 // Create a <p> element
+        para.innerHTML = pText+'<br>';                // Insert text
+        document.getElementById("page").appendChild(para);     // Append <p> to <div> with id="myDIV"
+    }
+    
+    ausgabe(){
+       let txt= 'The Name ist: '+ this.name+'<br>'+
+                'The price ist: '+this.price +'<br>'+
+                'The auther ist: '+this.auther +'<br>'+
+                'The isbn ist: '+this.isbn +'<br>';
+        
+        return txt;
+    }
+    
+    set setName(name){
+        this._name = name.toUpperCase();
+    }
+//    
+    get getName(){
+        return this._name;
+    }
+    
+}
